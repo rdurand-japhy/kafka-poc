@@ -1,1 +1,1 @@
-# kafka-poc
+# rabbitmq-poc

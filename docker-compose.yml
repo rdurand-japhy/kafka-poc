@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  sender:
+    container_name: sender
+    ports:
+      - "3000:3000"
+    build:
+      context: ./
+      dockerfile: Dockerfile-sender
+    env_file:
+      .env
+    restart: always
+
+  consumer:
+    container_name: consumer
+    build:
+      context: ./
+      dockerfile: Dockerfile-consumer
+    env_file:
+      .env
+    restart: always
